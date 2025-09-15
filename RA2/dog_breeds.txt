@@ -1,0 +1,10 @@
+Labrador Retriever
+German Shepherd
+Golden Retriever
+French Bulldog
+Beagle
+Poodle
+Rottweiler
+Dachshund
+Siberian Husky
+Cavalier King Charles Spaniel
