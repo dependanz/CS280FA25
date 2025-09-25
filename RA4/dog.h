@@ -23,10 +23,18 @@ public:
     
     bool operator==(const Dog &other) const;
     bool operator!=(const Dog &other) const;
+
+    // Comparing their ages.
     bool operator<(const Dog &other) const;
     bool operator>(const Dog &other) const;
 
+    // "Breeding logic"
     Dog operator*(Dog other) const;
+
+    // dog : Dog + ageIncrease : int
+    Dog operator+(int ageIncrease);
+
+    // ageIncrease : int + dog : Dog
     friend Dog operator+(int ageIncrease, const Dog &dog);
 };
 

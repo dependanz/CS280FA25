@@ -36,5 +36,8 @@ int main() {
     dog1 = 2 + dog1;
     cout << "After aging, Dog 1's new age: " << dog1.getAge() << endl;
 
+    dog1 = dog1 + 2;
+    cout << "After aging (again), Dog 1's new age: " << dog1.getAge() << endl;
+
     return 0;
 }

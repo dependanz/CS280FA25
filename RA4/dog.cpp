@@ -52,6 +52,14 @@ Dog Dog::operator*(Dog other) const {
     );
 }
 
+Dog Dog::operator+(int ageIncrease) {
+    return Dog(
+        name,
+        breed,
+        age + ageIncrease
+    );
+}
+
 Dog operator+(int ageIncrease, const Dog &dog) {
     return Dog(dog.name, dog.breed, dog.age + ageIncrease);
 }
