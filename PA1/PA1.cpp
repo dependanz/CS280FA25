@@ -33,7 +33,8 @@ int main(int argc, char** argv) {
     vector<LexItem> strList;
     int linenum = 0;
     LexItem currentToken = getNextToken(fileStream, linenum);
-    while(currentToken != DONE && currentToken != ERR) {
+    while(currentToken != DONE) {
+        cout << currentToken << endl;
         switch(currentToken.GetToken()) {
             case IDENT:
                 identList.push_back(currentToken);
@@ -46,6 +47,7 @@ int main(int argc, char** argv) {
                 strList.push_back(currentToken);
                 break;
         }
+        currentToken = getNextToken(fileStream, linenum);
     }
     // [end]
 
@@ -54,8 +56,10 @@ int main(int argc, char** argv) {
     for(int i = 0; i < identList.size(); i++) {
         cout << i << ") \"" << identList[i] << "\"" << endl;
     }
-    
+
     // [end]
+
+    fileStream.close();
 
     return 0;
 }
