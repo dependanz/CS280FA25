@@ -110,14 +110,14 @@ int main(int argc, char** argv) {
     }
 
     // Print vowel counts
-    for(auto it1 : wordMap) {
-        int numVowels = it1.first;
-        map<string, int> words = it1.second;
+    for(map<int, map<string, int>>::iterator it1 = wordMap.begin(); it1 != wordMap.end(); it1++) {
+        int numVowels = it1->first;
+        map<string, int> words = it1->second;
 
         cout << "Words with " << numVowels << " vowels:" << endl;
-        for(auto it2 : words) {
-            string lexeme = it2.first;
-            int count = it2.second;
+        for(map<string, int>::iterator it2 = words.begin(); it2 != words.end(); it2++) {
+            string lexeme = it2->first;
+            int count = it2->second;
 
             cout << "  " << lexeme << ": " << count << endl;
         }
