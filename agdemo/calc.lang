@@ -1,0 +1,5 @@
+exprlist: expr ; [exprlist]
+expr: num + num | num
+num: INT | REAL
+
+[start] exprlist
