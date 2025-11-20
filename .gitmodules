@@ -1,0 +1,3 @@
+[submodule "minpy"]
+	path = minpy
+	url = https://github.com/dependanz/minpy
